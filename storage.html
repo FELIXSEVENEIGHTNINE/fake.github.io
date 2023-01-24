@@ -19,8 +19,8 @@
 	<body>
 		<div id="header">
 			<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">English
-					<span class="caret"></span>
+				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> 
+					<span class="glyphicon glyphicon-globe"></span> English <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
 					<li><a href="#">Japanese</a></li>
@@ -30,14 +30,17 @@
 				<a href="help.html"><button class="btn btn-btn-default" type="button">
 					<span class="glyphicon glyphicon-question-sign"></span> Help
 				</button></a>
+				<a href="info.html"><button class="btn btn-btn-default" type="button">
+					<span class="glyphicon glyphicon-info-sign"></span> Info
+				</button></a>
 			</div>
 			<div class="jumbotron" id="menu">
 				<nav class="user">
 					<a href="">REGISTER</a> |
 					<a href="">LOGIN</a>
 				</nav>
-				<a href="home.html"><img src="img\fake.png" id="logo"></a>
-				<h1 id="logo_name"> Fake <small> Definitely not fake </small></h1>
+				<a href="home.html"><img src="img\fake.png" id="logo">
+				<h1 id="logo_name"> Fake</a><small> Definitely not fake </small></h1>
 				<center><nav class="prods container">
 					<div class="row">
 						<a href="storage.html#chassis" class="col-sm-4">CHASSIS</a>
@@ -74,12 +77,14 @@
 							<th><center>MODEL</center></th>
 						</tr>
 					</thead>
+					<thead>
+						<tr>
+							<th colspan="4" id="chassis"><center> <h1> CHASSIS </h1> </center> </th>
+						</tr>
+					</thead>
 					<tbody>
 						<tr>
-							<td colspan="4"><center> <h1> CHASSIS </h1> </center> </td>
-						</tr>
-						<tr>
-							<td id="chassis"><h1>Chassis</h1></td>
+							<td><h1>Chassis</h1></td>
 							<td>CORSAIR</td>
 							<td>Php 5,000</td>
 							<td><img class="img_table" src="img\4KD.png"  width="300px" height="300px"></td>
@@ -91,12 +96,14 @@
 							<td><img class="img_table" src="img\H5FLOW.png"  width="300px" height="300px"></td>
 						</tr>
 					</tbody>
+					<thead>
+						<tr>
+							<th colspan="4" id="motherboard"><center> <h1> MOTHERBOARD </h1> </center> </th>
+						</tr>
+					</thead>
 					<tbody>
 						<tr>
-							<td colspan="4"><center> <h1> MOTHERBOARD </h1> </center> </td>
-						</tr>
-						<tr>
-							<td id="motherboard">Motherboard</td>
+							<td>Motherboard</td>
 							<td>CORSAIR</td>
 							<td>Php 5,000</td>
 							<td><img class="img_table" src="img\4KD.png"  width="300px" height="300px"></td>
@@ -110,7 +117,10 @@
 					</tbody>
 					<tbody>
 						<tr>
-							<td id="processor">processor</td>
+							<th colspan="4" id="processor"><center> <h1> PROCESSOR </h1> </center> </th>
+						</tr>
+						<tr>
+							<td>processor</td>
 							<td>CORSAIR</td>
 							<td>Php 5,000</td>
 							<td><img class="img_table" src="img\4KD.png"  width="300px" height="300px"></td>
