@@ -23,7 +23,7 @@
 		
 		.prods {
 			font-size: 20px;
-			white-space: pre;
+			/*white-space: pre;*/
 			
 		}
 
@@ -35,8 +35,6 @@
 
 #body {
 	width: auto;
-	padding-left: 200px;
-	padding-right: 200px;
 }
 	#side-header {
 		margin-top: -30px;
@@ -79,18 +77,4 @@
 			th {
 				font-size: 20px;
 			}
-	#sidenav {
-		/*overflow: visible;
-		position: sticky;*/
-		position: fixed;
-		top: 330px;
-		left: 10px;
-		border: 1px solid;
-		width: 200px;
-		height: 600px;
-		text-align: left;
-		font-size:  20px;
-		padding-left: 10px;
-		
-	}
 		
