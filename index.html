@@ -15,13 +15,128 @@
 		
 		<!-- ALL GLYPHS https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp -->
 		
+		<style>
+		* { box-sizing: border-box; }
 
+		.container { position: relative; }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+		</style>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 	</head>
 	<body>
 		<div id="header">
 			<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">English
-					<span class="caret"></span>
+				<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"> 
+					<span class="glyphicon glyphicon-globe"></span> English <span class="caret"></span>
 				</button>
 				<ul class="dropdown-menu">
 					<li><a href="#">Japanese</a></li>
@@ -31,14 +146,17 @@
 				<a href="help.html"><button class="btn btn-btn-default" type="button">
 					<span class="glyphicon glyphicon-question-sign"></span> Help
 				</button></a>
+				<a href="info.html"><button class="btn btn-btn-default" type="button">
+					<span class="glyphicon glyphicon-info-sign"></span> Info
+				</button></a>
 			</div>
 			<div class="jumbotron" id="menu">
 				<nav class="user">
 					<a href="">REGISTER</a> |
 					<a href="">LOGIN</a>
 				</nav>
-				<a href="home.html"><img src="img\fake.png" id="logo"></a>
-				<h1 id="logo_name"> Fake <small> Definitely not fake </small></h1>
+				<a href="home.html"><img src="img\fake.png" id="logo">
+				<h1> <b id="logo_name">Fake</b></a> <small>Definitely not fake</small></h1>
 				<center><nav class="prods container">
 					<div class="row">
 						<a href="storage.html#chassis" class="col-sm-4">CHASSIS</a>
@@ -60,26 +178,103 @@
 		
 		<div id="body">
 			<div id="store"> 
+			<center><h1> TOP PICKS FOR YOU  </h1></center>
+			<center>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active" style="background-color: Cyan"></li>
+					<li data-target="#myCarousel" data-slide-to="1" style="background-color: Cyan"></li>
+					<li data-target="#myCarousel" data-slide-to="2" style="background-color: Cyan"></li>
+				</ol>
+
+				<div class="carousel-inner">
+					<div class="item active">
+						<a href="ryzen_proc.htm"><img src="img/ryzen.jfif" width="20%"></a>
+					</div>
+
+					<div class="item">
+						<a href="b450m_mother.htm"><img src="img/b450m.png" width="20%"></a>
+					</div>
+
+					<div class="item">
+						<a href="b650_mother.htm"><img src="img/b650.webp"width="20%"></a>
+					</div>
+				</div>
+			</div>
+			</center>
+			
+
 				<div class="page-header">
 					<center> <h1> CURRENT PRODUCTS IN OUR WAREHOUSE </h1> </center>
 				</div>
-				
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-4"> <img class="main-img" src="img\4KD.png"> <br> CORSAIR 4000D</div>
-						<div class="col-sm-4"> <img class="main-img" src="img\H5FLOW.png"> <br> CORSAIR 4000D</div>
-						<div class="col-sm-4"> <img class="main-img" src="img\4KD.png"> <br> CORSAIR 4000D</div>
+						<a href="corsair_chassis.htm"> <div class="col-sm-4"> <img class="main-img" src="img\4KD.png"> <br> CORSAIR 4000D</div> </a>
+						<a href="nzxt_chassis.htm"><div class="col-sm-4"> <img class="main-img" src="img\H5FLOW.png"> <br> NZXT H5 FLOW</div> </a>
+						<a href="b650_mother.htm"><div class="col-sm-4"> <img class="main-img" src="img\b650.webp"> <br> GIGABYTE B650 AORUS ELITE</div></a>
 					</div>
 					<div class="row">
-						<div class="col-sm-3"> <img class="main-img" src="img\4KD.png"> <br> CORSAIR 4000D</div>
-						<div class="col-sm-3"> <img class="main-img" src="img\4KD.png"> <br> CORSAIR 4000D</div>
-						<div class="col-sm-3"> <img class="main-img" src="img\4KD.png"> <br> CORSAIR 4000D</div>
-						<div class="col-sm-3"> <img class="main-img" src="img\4KD.png"> <br> CORSAIR 4000D</div>
+						<a href="b450m_mother.htm"><div class="col-sm-3"> <img class="main-img" src="img\b450m.png"> <br> ASROCK B450M STEEL LEGEND</div></a>
+						<a href="intel_proc.htm"><div class="col-sm-3"> <img class="main-img" src="img\intel.webp"> <br> INTEL I5 12400</div></a>
+						<a href="ryzen_proc.htm"><div class="col-sm-3"> <img class="main-img" src="img\ryzen.jfif"> <br> RYZEN 5 5600</div></a>
+						<a href="trident_ram.htm"><div class="col-sm-3"> <img class="main-img" src="img\trident.webp"> <br> G-SKILL TRIDENT Z5</div></a>
+					</div>
+					<div class="row">
+						<a href="fury_ram.htm"><div class="col-sm-4"> <img class="main-img" src="img\fury.webp"> <br> KINGSTON FURY</div></a>
+						<a href="armor_gfx.htm"><div class="col-sm-4"> <img class="main-img" src="img\armor.webp"> <br> MSI RX6600 ARMOR</div></a>
+						<a href="rtx_gfx.htm"><div class="col-sm-4"> <img class="main-img" src="img\gigabye.webp"> <br> GIGABYTE RTX3060</div></a>
+					</div>
+					<div class="row">
+						<a href="hdd_storage.htm"><div class="col-sm-6"> <img class="main-img" src="img\western.webp"> <br> WD BLUE HDD</div></a>
+						<a href="ssd_storage.htm"><div class="col-sm-6"> <img class="main-img" src="img\west.webp"> <br> WD BLUE SSD</div></a>
 					</div>
 				</div>
 				
 			</div>
 		</div>
+		
+		<div id ="footer" class="jumbotron">
+			<center>
+				<div>
+					<h4> General </h4>
+					<nav style="margin-top: -10px; font-size:18px;">
+						<a href="home.html"> Home</a> | 
+						<a href="storage.html">Storage</a>
+					</nav>
+				</div>
+				<div>
+					<h4> Storage </h4>
+					<nav style="margin-top: -10px; font-size:18px;">
+						<a href="home.html"> Chassis</a> | 
+						<a href="storage.html">Motherboards</a> |
+						<a href="home.html"> Processors</a> | 
+						<a href="storage.html">Power Supplies</a> |
+						<a href="home.html"> Ram and Storages</a> | 
+						<a href="storage.html">Graphics Card</a> |
+						<a href="home.html"> Monitors</a> | 
+						<a href="storage.html">Others</a>
+					</nav>
+				</div>
+				<div>
+					<h4> Information </h4>
+					<nav style="margin-top: -10px; font-size:18px;">
+						<a href="help.html">Help</a> |
+						<a href="info.html">Info</a>
+					</nav>
+				</div>
+				<div>
+					<h4> Log In </h4>
+					<nav style="margin-top: -10px; font-size:18px;">
+						<a href="help.html">Log In</a> |
+						<a href="info.html">Register</a>
+					</nav>
+				</div>
+				<h4 style="margin-top: 50px">
+				Created by: <br> <br>
+				NERIA, Dan <br>
+				DYCHIOCO, Josiah <br>
+				EBORDE, Yji </h4>
+			</center>
 		</div>
 	</body>
 </html>
