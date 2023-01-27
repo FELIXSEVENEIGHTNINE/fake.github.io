@@ -15,7 +15,122 @@
 		
 		<!-- ALL GLYPHS https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp -->
 		
+		<style>
+		* { box-sizing: border-box; }
 
+		.container { position: relative; }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+		</style>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 	</head>
 	<body>
 		<div id="header">
@@ -63,6 +178,32 @@
 		
 		<div id="body">
 			<div id="store"> 
+			<center><h1> TOP PICKS FOR YOU  </h1></center>
+			<center>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active" style="background-color: Cyan"></li>
+					<li data-target="#myCarousel" data-slide-to="1" style="background-color: Cyan"></li>
+					<li data-target="#myCarousel" data-slide-to="2" style="background-color: Cyan"></li>
+				</ol>
+
+				<div class="carousel-inner">
+					<div class="item active">
+						<a href="ryzen_proc.htm"><img src="img/ryzen.jfif" width="20%"></a>
+					</div>
+
+					<div class="item">
+						<a href="b450m_mother.htm"><img src="img/b450m.png" width="20%"></a>
+					</div>
+
+					<div class="item">
+						<a href="b650_mother.htm"><img src="img/b650.webp"width="20%"></a>
+					</div>
+				</div>
+			</div>
+			</center>
+			
+
 				<div class="page-header">
 					<center> <h1> CURRENT PRODUCTS IN OUR WAREHOUSE </h1> </center>
 				</div>
