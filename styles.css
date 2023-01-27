@@ -64,7 +64,7 @@
 			
 		}
 		
-		.col-sm-4 {
+		.col-sm-4,  .col-sm-3, .col-sm-6 {
 				margin-bottom: 20px;
 		}
 		
@@ -77,4 +77,22 @@
 			th {
 				font-size: 20px;
 			}
-		
+			
+			td h1, td h2 {
+					text-align: center;
+			}
+
+
+
+#general-info {
+	margin-left: 200px;
+	margin-right: 200px;
+}
+	.store-image {
+		float: left;
+	}
+
+#purchase {
+	margin-left: 200px;
+	margin-right: 200px;
+}
