@@ -9,13 +9,12 @@
 
 		<!-- jQuery library -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="script.js"></script>
 
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		
 		<!-- ALL GLYPHS https://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp -->
-		
-
 	</head>
 	<body>
 		<div id="header">
@@ -42,11 +41,52 @@
 				</nav>
 				<a href="home.html"><img src="img\fake.png" id="logo">
 				<h1> <b id="logo_name">Fake</b></a> <small>Definitely not fake</small></h1>
+				<nav class="prods container">
+					<a href="storage.html"><h2> &lt Back </h2></a>
+				</nav>
+				
 			</div>
 		</div>
 		
-		<div id="body">
+		<div id="body" class="jumbotron">
+			<div id="general-info"> 
+				<center><h1> INTEL I5 12400 <small> Php 14,000 </small></h1></center>
+				<div class="store-image">
+					<center><img class="img_table" src="img\intel.webp"  width="500px" height="500px"></center>
+				</div>
+				<div class="store-info">
+					<p>
+					</p>
+					<center>
+					
+					
+					<!--<ul class="list-group" style="width: 300px;">
+						<li class="list-group-item list-group-item-success">First item</li>
+						<li class="list-group-item list-group-item-info">Second item</li>
+						<li class="list-group-item list-group-item-warning">Third item</li>
+						<li class="list-group-item list-group-item-danger">Fourth item</li>
+					</ul>
+					-->
+				</div>
+			</div>
 			
+			<div id="purchase">
+				<center>
+				<br>
+				<br>
+				<div>
+					<button id="buybuy"> Buy </button>
+					<button id="cart"> Add to Cart </button>
+					<button id="prepur"> Pre-purchase </button>
+				</div>
+				</center>
+			</div>
+			
+			<!--
+			<ul class="pager">
+				<li><a href="#">Previous</a></li>
+				<li><a href="#">Next</a></li>
+			</ul>-->
 		</div>
 		
 		<div id ="footer" class="jumbotron">
