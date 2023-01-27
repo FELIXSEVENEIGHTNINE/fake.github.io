@@ -20,6 +20,7 @@
 				margin-left: 100px;
 				margin-right: 100px;
 				font-size: 20px;
+				margin-bottom: 50px;
 			}
 				.panel-title {
 					font-size: 30px;
@@ -33,19 +34,21 @@
 				animation-iteration-count: 999;
 				color: Black;
 				opacity: .8;
+				border-radius: 100px;
+				height: 50px;
 			}
 			@keyframes example {
-				0%   {background-color:white; color: Black;}
-				10%  {background-color:yellow; color: Black;}
-				20%  {background-color:green; color: White;}
-				30%  {background-color:purple; color: White;}
-				40%  {background-color:blue; color: White;}
-				50% {background-color:cyan;color: Black;}
-				60% {background-color:white; color: Black;}
-				70% {background-color:pink; color: Black;}
-				80% {background-color:red; color: White;}
-				90% {background-color:orange; color: White;}
-				100% {background-color:white; color: Black;}
+				0%   {background-color:white;}
+				10%  {background-color:#f9ff80;}
+				20%  {background-color:#80ff91;}
+				30%  {background-color:#a280ff; }
+				40%  {background-color:#80a6ff; }
+				50% {background-color:#80f7ff;}
+				60% {background-color:white;}
+				70% {background-color:#ff8680;}
+				80% {background-color:#ff8680;}
+				90% {background-color:#ffc080;}
+				100% {background-color:white;}
 			}
 			
 			#hiding-between-the-walls {
@@ -53,15 +56,12 @@
 				width: 500px;
 				height: 80px;
 			}
+			
+			#who_we_are {
+				margin-left: 300px;
+				margin-right: 300px;
+			}
 		</style>
-
-
-
-
-
-
-
-
 	</head>
 	<body>
 		<div id="header">
@@ -98,18 +98,26 @@
 			
 			<center>
 			<div id="hiding-between-the-walls">
-				<img src="img/troll.jpg" usemap="#mapper" height="80px"  width="500px">
+				<img src="img/troll.jpg" usemap="#mapper" height="50px"  width="500px">
 				<map name="mapper">
-					<area  shape="rect" coords="0,0,80,80" href="">
+					<area  shape="rect" coords="0,0,50,50" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
 				</map>
 			</div></center>
 			
 			<div id="who_we_are">
-				
+			<center>
+				<h2><b> Fake is an e-commerce platform in Southeast Asia. </b></h2>
+				<br>
+				<p>
+					Launched in 2022, it is a platform that reaches out to multiple countries... from the snowy plains of Canada to the hot temperatures of Australia, 
+					providing customers with an easy, secure and fast online shopping experience through strong payment and fulfillment support. <br>
+					<br>
+					Our business is short-scaled, so reaching our goal for a fast online shopping experience might not be for everyone.<br>
+					<br>
+					Our business focuses on selling computer parts to customers.
+				</p>
+			</center>
 			</div>
-		
-			
-
 		</div>
 		
 		<div id ="footer" class="jumbotron">
